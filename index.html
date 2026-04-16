@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat vs Dog</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+
+    <div id="gameContainer">
+        <div id="mainMenu" class="screen overlay active">
+            <h1 style="font-family: 'Lucida Console', monospace;">Cat vs Dog</h1>
+            <img src="assets/images/btns/play_btn.png" id="playBtn" alt="Play" class="clickable btn-loader">
+        </div>
+
+        <div id="winScreen" class="screen overlay hidden">
+            <h1>LEVEL CLEARED!</h1>
+            <img src="assets/images/btns/continue_btn.png" id="nextLevelBtn" alt="Next Level" class="clickable btn-loader">
+        </div>
+
+        <div id="loseScreen" class="screen overlay hidden">
+            <h1>GAME OVER</h1>
+            <img src="assets/images/btns/restart_btn.png" id="restartBtn" alt="Restart" class="clickable btn-loader">
+        </div>
+        
+        <img src="assets/images/btns/sound_on.png" id="soundToggle" class="clickable" alt="Toggle Sound">
+    </div>
+
+    <div id="skillBar">
+        <div class="skill-side cat-skills">
+            <div class="skill-container">
+                <div class="skill">
+                    <img id="iconDash" src="" alt="Dash">
+                </div>
+                <div id="cdDash" class="skill-label">J</div>
+            </div>
+            
+            <div class="skill-container">
+                <div class="skill">
+                    <img id="iconSlap" src="" alt="Slap">
+                </div>
+                <div id="cdSlap" class="skill-label">K</div>
+            </div>
+        </div>
+
+        <div class="skill-side dog-skills">
+            <div class="skill-container">
+                <div class="skill">
+                    <img id="iconGrowl" src="" alt="Growl">
+                </div>
+                <div id="cdGrowl" class="skill-label">AUTO</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/sketch.js"></script>
+</body>
+</html>
