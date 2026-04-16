@@ -60,14 +60,14 @@ function setup() {
     cvs.parent('gameContainer');
 
     snds.bgm.setVolume(0.2);
-    snds.catHit.setVolume(0.8);
-    snds.dogHit.setVolume(0.8);
-    snds.mouseHit.setVolume(0.8);
+    snds.catHit.setVolume(0.5);
+    snds.dogHit.setVolume(0.5);
+    snds.mouseHit.setVolume(0.5);
     snds.catDash.setVolume(0.5);
-    snds.catSlap.setVolume(0.6);
-    snds.dogGrowl.setVolume(0.6);
-    snds.win.setVolume(1.0);
-    snds.lose.setVolume(1.0);
+    snds.catSlap.setVolume(0.5);
+    snds.dogGrowl.setVolume(0.2);
+    snds.win.setVolume(0.2);
+    snds.lose.setVolume(0.5);
 
     snds.bgm.loop();
 
@@ -359,7 +359,6 @@ function draw() {
             playSnd(snds.win);
             gameState = 'WIN';
             
-            // Cập nhật text chiến thắng dựa trên level hiện tại
             let winTitle = document.querySelector('#winScreen h1');
             if (winTitle) {
                 if (level >= 3) {
